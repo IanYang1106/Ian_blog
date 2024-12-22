@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ian&#39;s Learning Blog</title>
+    <link>http://localhost:1313/Ian_blog/</link>
+    <description>Recent content on Ian&#39;s Learning Blog</description>
+    <generator>Hugo -- 0.138.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/Ian_blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一篇文章</title>
+      <link>http://localhost:1313/Ian_blog/posts/first-post/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Ian_blog/posts/first-post/</guid>
+      <description>&lt;h2 id=&#34;歡迎&#34;&gt;歡迎&lt;/h2&gt;
+&lt;p&gt;這是我的第一篇部落格文章，主要用來測試 Hugo 的功能。&lt;/p&gt;
+&lt;h2 id=&#34;程式碼範例&#34;&gt;程式碼範例&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello_world&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>關於我</title>
+      <link>http://localhost:1313/Ian_blog/about/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Ian_blog/about/</guid>
+      <description>&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;這裡是我的學習筆記部落格，主要記錄程式開發和技術學習的心得。&lt;/p&gt;
+&lt;h2 id=&#34;技能&#34;&gt;技能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;程式語言：Ruby, JavaScript, Python&lt;/li&gt;
+&lt;li&gt;框架：Ruby on Rails, React&lt;/li&gt;
+&lt;li&gt;資料庫：PostgreSQL, Redis&lt;/li&gt;
+&lt;li&gt;其他：Git, Docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;聯絡方式&#34;&gt;聯絡方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/IanYang1106&#34;&gt;IanYang1106&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:your.email@example.com&#34;&gt;your.email@example.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

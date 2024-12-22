@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>程式開發 on Ian&#39;s Learning Blog</title>
+    <link>http://localhost:1313/Ian_blog/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/</link>
+    <description>Recent content in 程式開發 on Ian&#39;s Learning Blog</description>
+    <generator>Hugo -- 0.138.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/Ian_blog/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一篇文章</title>
+      <link>http://localhost:1313/Ian_blog/posts/first-post/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/Ian_blog/posts/first-post/</guid>
+      <description>&lt;h2 id=&#34;歡迎&#34;&gt;歡迎&lt;/h2&gt;
+&lt;p&gt;這是我的第一篇部落格文章，主要用來測試 Hugo 的功能。&lt;/p&gt;
+&lt;h2 id=&#34;程式碼範例&#34;&gt;程式碼範例&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello_world&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

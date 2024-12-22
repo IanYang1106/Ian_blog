@@ -1,0 +1,114 @@
+baseURL: "https://IanYang1106.github.io/Ian_blog/"
+title: "Ian's Learning Blog"
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Ian's Learning Blog
+  description: "技術學習筆記與心得分享"
+  keywords: [Blog, Portfolio, Learning]
+  author: Ian Yang
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    disableHLJS: true # to disable highlight.js
+    disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+  profileMode:
+    enabled: true
+    title: "Ian's Learning Blog" # optional default will be site title
+    subtitle: "學習、紀錄、分享"
+    imageUrl: "/images/profile.jpg" # optional
+    imageTitle: "My Profile Image" # optional
+    buttons:
+      - name: 文章
+        url: posts
+      - name: 分類
+        url: categories
+      - name: 標籤
+        url: tags
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/IanYang1106"
+    - name: email
+      url: "mailto:your.email@example.com"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: search
+      name: 搜尋
+      url: /search/
+      weight: 10
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 20
+    - identifier: categories
+      name: 分類
+      url: /categories/
+      weight: 30
+    - identifier: tags
+      name: 標籤
+      url: /tags/
+      weight: 40
+    - identifier: about
+      name: 關於
+      url: /about/
+      weight: 50
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # necessary for search
+        
