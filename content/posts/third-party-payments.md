@@ -48,7 +48,6 @@ project_root/
 
 ## 檔案與功能詳細說明
 
-````markdown
 ### 核心檔案
 
 #### 1. models.py
@@ -109,8 +108,3 @@ def create_payment_request(order_data):
 
 - 驗證綠界簽名，確保交易資料完整性。
 - 格式化金流參數，將輸入資料轉換為符合綠界規範的格式。
-
-```
-
-```
-````
