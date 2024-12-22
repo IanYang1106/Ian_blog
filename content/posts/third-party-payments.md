@@ -82,7 +82,6 @@ urlpatterns = [
     path('failure/', views.failure, name='failure'),     # 支付失敗頁
 ]
 ```
-````
 
 #### 4. services.py
 
@@ -114,3 +113,4 @@ def create_payment_request(order_data):
 ```
 
 ```
+````
