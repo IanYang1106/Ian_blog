@@ -10,12 +10,12 @@ draft: false
 
 ## 技能
 
-- 程式語言：Ruby, JavaScript, Python
-- 框架：Ruby on Rails, React
-- 資料庫：PostgreSQL, Redis
+- 程式語言： JavaScript, Python
+- 框架：.Vue
+- 資料庫：MySQL
 - 其他：Git, Docker
 
 ## 聯絡方式
 
 - GitHub: [IanYang1106](https://github.com/IanYang1106)
-- Email: your.email@example.com
+- Email: monoyen2001@gmail.com
