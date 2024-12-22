@@ -46,54 +46,71 @@ project_root/
 └── migrations/                   # 資料庫遷移記錄
 ```
 
-### 檔案與功能詳細說明
+## 檔案與功能詳細說明
 
-#### 核心檔案
+````markdown
+### 核心檔案
 
-1. models.py
-   定義支付相關的資料表，如：
-   • 訂單資訊（Order）。
-   • 交易記錄（Transaction）。
-   • 可擴展其他金流處理記錄。
-2. views.py
-   包含處理支付的邏輯，如：
-   • 生成支付表單。
-   • 接收綠界的回調（NotifyURL 和 ReturnURL）。
-   • 驗證支付簽名。
-3. urls.py
-   定義金流相關的 URL 路由，例如：
+#### 1. models.py
 
-```py
+定義支付相關的資料表，例如：
+
+- 訂單資訊（Order）：記錄訂單的詳細資訊（如金額、商品名稱）。
+- 交易記錄（Transaction）：記錄每筆交易的狀態與回應資訊。
+- 可擴展其他金流處理記錄。
+
+#### 2. views.py
+
+包含處理支付的主要邏輯，例如：
+
+- 生成支付表單，向用戶展示支付細節。
+- 接收綠界的回調（NotifyURL 和 ReturnURL）。
+- 驗證支付簽名，更新訂單狀態。
+
+#### 3. urls.py
+
+定義金流相關的 URL 路由，例如：
+
+```python
 from django.urls import path
 from . import views
 
 urlpatterns = [
     path('checkout/', views.checkout, name='checkout'),  # 支付頁面
     path('callback/', views.callback, name='callback'),  # 綠界的回調
-    path('success/', views.success, name='success'),    # 支付成功頁
-    path('failure/', views.failure, name='failure'),    # 支付失敗頁
+    path('success/', views.success, name='success'),     # 支付成功頁
+    path('failure/', views.failure, name='failure'),     # 支付失敗頁
 ]
 ```
+````
 
-4. services.py
-   • 封裝綠界金流 API 的邏輯，如簽名生成、交易請求等。
-   • 例如：
+#### 4. services.py
 
-```py
+封裝綠界金流 API 的邏輯，例如簽名生成、交易請求等功能。範例如下：
+
+```python
 import hashlib
 import requests
 
 def generate_signature(params, hash_key, hash_iv):
+    # 將參數組成字串並進行加密
     raw = f"HashKey={hash_key}&{params}&HashIV={hash_iv}"
     return hashlib.sha256(raw.encode('utf-8')).hexdigest().upper()
 
 def create_payment_request(order_data):
+    # 向綠界金流 API 發送支付請求
     url = "https://payment.ecpay.com.tw/Cashier/AioCheckOut/V5"
     response = requests.post(url, data=order_data)
     return response.json()
 ```
 
-5. utils.py
-   • 工具函數，例如：
-   • 驗證綠界簽名。
-   • 格式化金流參數。
+#### 5. utils.py
+
+包含工具函數，例如：
+
+- 驗證綠界簽名，確保交易資料完整性。
+- 格式化金流參數，將輸入資料轉換為符合綠界規範的格式。
+
+```
+
+```
