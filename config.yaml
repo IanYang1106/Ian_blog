@@ -107,8 +107,7 @@ menu:
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # necessary for search
-        
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
