@@ -108,7 +108,7 @@ payments/
 - templates/: 存放支付相關的前端模板
 - migrations/: 資料庫遷移檔案
 
-models.py
+##### models.py
 
 ```py
 from django.db import models
@@ -140,7 +140,7 @@ class Order(models.Model):
 
 ```
 
-views.py
+##### views.py
 
 ```py
 from django.shortcuts import render, redirect
@@ -216,7 +216,7 @@ def payment_complete(request):
 
 ```
 
-ecpay_sdk.py
+##### ecpay_sdk.py
 
 ```python
 import urllib.parse
@@ -316,7 +316,7 @@ class ECPayPayment:
 
 ```
 
-編碼方法較為簡單的例子如下
+##### 檢查碼產生原理簡易範例
 
 1. 參數名稱的字母順序排列
 
@@ -373,7 +373,7 @@ HashKey%3DYourHashKey%26MerchantID%3D2000132%26MerchantTradeNo%3DTest123456%26Pa
 8A72D16F0D2D62234A5796B9B0A55D4B4EA65F8E3F8305066CFF98D8F516DAB5
 ```
 
-urls.py
+##### urls.py
 
 ```py
 from django.urls import path
@@ -388,7 +388,7 @@ urlpatterns = [
 ]
 ```
 
-checkout.html
+##### checkout.html
 
 ```html
 {% extends "shared/layout.html" %}{% load socialaccount %} {% block "content" %}
@@ -470,7 +470,7 @@ checkout.html
 {% endblock %}
 ```
 
-complete.html
+##### complete.html
 
 ```html
 {% extends "shared/layout.html" %}{% load socialaccount %} {% block "content" %}
@@ -544,7 +544,7 @@ complete.html
 {% endblock %}
 ```
 
-create_payment.html
+##### create_payment.html
 
 ```html
 {% extends "shared/layout.html" %}{% load socialaccount %} {% block "content" %}
@@ -600,7 +600,7 @@ create_payment.html
 {% endblock %}
 ```
 
-settings.py
+##### settings.py
 
 ```python
 import os
@@ -621,7 +621,7 @@ ECPAY_PAYMENT_URL = env('ECPAY_PAYMENT_URL')
 CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS').split(',')
 ```
 
-.env
+##### .env
 
 ```python
 ECPAY_MERCHANT_ID=3002607
@@ -631,7 +631,8 @@ ECPAY_PAYMENT_URL=https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5
 CSRF_TRUSTED_ORIGINS=https://ad33-61-220-182-115.ngrok-free.app
 ```
 
-當使用 ngrok 需要依照虛擬網址修改的地方
+##### 當使用 ngrok 需要依照虛擬網址修改的地方
+
 .env
 
 ```
