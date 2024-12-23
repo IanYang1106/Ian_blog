@@ -316,6 +316,63 @@ class ECPayPayment:
 
 ```
 
+編碼方法較為簡單的例子如下
+
+1. 參數名稱的字母順序排列
+
+```
+MerchantID=2000132
+MerchantTradeNo=Test123456
+PaymentType=aio
+```
+
+2. 加上 HashKey 和 HashIV
+   - 在最前面加上 HashKey=你的 HashKey。
+   - 在最後加上 &HashIV=你的 HashIV。
+
+```
+HashKey=YourHashKey&MerchantID=2000132&MerchantTradeNo=Test123456&PaymentType=aio&HashIV=YourHashIV
+```
+
+3. URL 編碼
+   - 把整個字串進行 URL encode，把特殊字元（如空格、& 等）轉換為編碼格式。
+
+```
+HashKey%3DYourHashKey%26MerchantID%3D2000132%26MerchantTradeNo%3DTest123456%26PaymentType%3Daio%26HashIV%3DYourHashIV
+```
+
+4. 加密
+   - 對 URL encode 後的結果使用 SHA256 算法進行加密。
+   - 結果會是一個 64 位的十六進位字串。
+5. 轉換成大寫
+   - 把加密後的結果轉換為大寫，得到最終的 CheckMacValue。
+
+前面五個步驟以此範例依序會有下列變化
+
+1. 排序後參數：
+
+```
+MerchantID=2000132&MerchantTradeNo=Test123456&PaymentType=aio
+```
+
+2. 加上 HashKey 和 HashIV：
+
+```
+HashKey=YourHashKey&MerchantID=2000132&MerchantTradeNo=Test123456&PaymentType=aio&HashIV=YourHashIV
+```
+
+3. URL encode：
+
+```
+HashKey%3DYourHashKey%26MerchantID%3D2000132%26MerchantTradeNo%3DTest123456%26PaymentType%3Daio%26HashIV%3DYourHashIV
+```
+
+4. SHA256 加密並轉大寫：
+
+```
+8A72D16F0D2D62234A5796B9B0A55D4B4EA65F8E3F8305066CFF98D8F516DAB5
+```
+
 urls.py
 
 ```py
