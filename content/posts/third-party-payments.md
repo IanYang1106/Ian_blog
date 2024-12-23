@@ -224,36 +224,80 @@ import hashlib
 from datetime import datetime
 from django.conf import settings
 
+
 class ECPayPayment:
+    """
+    綠界金流支付整合類別
+    負責處理與綠界金流服務的串接，包含訂單建立、參數加密等功能
+    """
+
     def __init__(self):
+        """
+        初始化綠界金流設定
+        從 Django settings 中讀取必要的金流參數
+        """
+        # 商店代號，由綠界提供的特店編號
         self.merchant_id = settings.ECPAY_MERCHANT_ID
+        # 金流 API 串接金鑰，用於參數加密
         self.hash_key = settings.ECPAY_HASH_KEY
+        # 金流 API 串接密碼，用於參數加密
         self.hash_iv = settings.ECPAY_HASH_IV
+        # 綠界金流 API 的基礎 URL
         self.payment_url = settings.ECPAY_PAYMENT_URL
 
     def create_order(self, order_id, amount, description):
+        """
+        建立綠界金流訂單
+
+        參數說明：
+        order_id (str): 訂單編號，必須唯一
+        amount (int/str): 訂單金額，必須為正整數
+        description (str): 交易描述
+
+        回傳：
+        dict: 包含所有需要傳送給綠界的訂單參數
+        """
+        # 準備綠界訂單所需的基本參數
         order_params = {
-            'MerchantID': self.merchant_id,
-            'MerchantTradeNo': order_id,
-            'MerchantTradeDate': datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
-            'PaymentType': 'aio',
-            'TotalAmount': str(amount),  # 確保金額為字串
-            'TradeDesc': urllib.parse.quote(description),
-            'ItemName': description,
-            'ReturnURL': 'https://7f2f-2001-b011-4008-1e8a-9199-5d4-645a-4b82.ngrok-free.app/notify/',  # 請修改為您的網域
-            'ClientBackURL': 'https://7f2f-2001-b011-4008-1e8a-9199-5d4-645a-4b82.ngrok-free.app/payments/complete/',  # 請修改為您的網域
-            'ChoosePayment': 'ALL',
-            'EncryptType': '1',
+            "MerchantID": self.merchant_id,  # 商店代號
+            "MerchantTradeNo": order_id,  # 訂單編號
+            "MerchantTradeDate": datetime.now().strftime(
+                "%Y/%m/%d %H:%M:%S"
+            ),  # 訂單建立時間
+            "PaymentType": "aio",  # 交易類型: 綜合支付
+            "TotalAmount": str(amount),  # 訂單金額
+            "TradeDesc": urllib.parse.quote(description),  # URL 編碼的交易描述
+            "ItemName": description,  # 商品名稱
+            "ReturnURL": "https://7f2f-2001-b011-4008-1e8a-9199-5d4-645a-4b82.ngrok-free.app/notify/",  # 交易通知網址
+            "ClientBackURL": "https://7f2f-2001-b011-4008-1e8a-9199-5d4-645a-4b82.ngrok-free.app/payments/complete/",  # 支付完成返回網址
+            "ChoosePayment": "ALL",  # 付款方式：ALL 為所有支付方式
+            "EncryptType": "1",  # 加密類型：1 為 SHA256
         }
 
-        # 產生檢查碼
+        # 產生檢查碼並加入訂單參數中
         check_mac = self._generate_check_mac(order_params)
-        order_params['CheckMacValue'] = check_mac
+        order_params["CheckMacValue"] = check_mac
 
         return order_params
 
     def _generate_check_mac(self, params):
-        # 排序參數
+        """
+        產生綠界訂單檢查碼
+
+        參數說明：
+        params (dict): 訂單參數字典
+
+        回傳：
+        str: SHA256 加密後的檢查碼
+
+        檢查碼規則：
+        1. 將參數依照參數名稱排序
+        2. 將參數值用 & 符號串接
+        3. 在首尾加入 HashKey 和 HashIV
+        4. 將字串轉為小寫並進行 URL encode
+        5. 使用 SHA256 進行加密並轉為大寫
+        """
+        # 依照參數名稱排序
         sorted_params = sorted(params.items())
 
         # 組合參數字串
@@ -262,13 +306,14 @@ class ECPayPayment:
             param_str += f"&{key}={value}"
         param_str += f"&HashIV={self.hash_iv}"
 
-        # URL encode
+        # URL encode 並轉為小寫
         encoded_str = urllib.parse.quote_plus(param_str).lower()
 
-        # SHA256 加密
-        check_mac = hashlib.sha256(encoded_str.encode('utf-8')).hexdigest().upper()
+        # SHA256 加密並轉為大寫
+        check_mac = hashlib.sha256(encoded_str.encode("utf-8")).hexdigest().upper()
 
         return check_mac
+
 ```
 
 urls.py
