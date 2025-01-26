@@ -41,10 +41,11 @@ params:
   assets:
     disableHLJS: true # to disable highlight.js
     disableFingerprinting: true
-    favicon: "/Ian_blog/images/favicon.ico"
     favicon16x16: "/Ian_blog/images/favicon-16x16.png"
     favicon32x32: "/Ian_blog/images/favicon-32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
+    # favicon and apple_touch_icon are commented out since files don't exist
+    # favicon: "/Ian_blog/images/favicon.ico"
+    # apple_touch_icon: "/Ian_blog/images/apple-touch-icon.png"
 
   profileMode:
     enabled: true
