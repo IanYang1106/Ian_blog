@@ -50,7 +50,7 @@ params:
     enabled: true
     title: "Ian's Learning Blog" # optional default will be site title
     subtitle: "學習、紀錄、分享"
-    imageUrl: "/images/profile.jpg" # optional
+    imageUrl: "/Ian_blog/images/profile.png" # optional
     imageTitle: "My Profile Image" # optional
     buttons:
       - name: 文章
