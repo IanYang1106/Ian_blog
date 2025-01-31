@@ -1,4 +1,12 @@
-# React State 入門指南 🔄
+---
+title: "CH6 React State 說明"
+date: 2025-01-30
+draft: false
+categories: ["React"]
+tags: ["學習筆記"]
+---
+
+# React State 說明 🔄
 
 ## 什麼是 State？
 想像你正在使用手機：
