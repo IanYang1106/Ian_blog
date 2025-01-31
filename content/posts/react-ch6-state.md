@@ -1,6 +1,6 @@
 ---
 title: "CH6 React State 說明"
-date: 2025-01-30
+date: 2025-01-31
 draft: false
 categories: ["React"]
 tags: ["學習筆記"]
