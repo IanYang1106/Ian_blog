@@ -1,12 +1,12 @@
 ---
-title: "CH8 React Hooks 入門指南"
+title: "CH8 React Hooks 說明"
 date: 2025-02-03T18:25:00+08:00
 draft: false
 categories: ["React"]
 tags: ["學習筆記"]
 ---
 
-# React Hooks 入門指南 🎣
+# React Hooks 說明 🎣
 
 ## 什麼是 Hooks？
 想像你在玩遊戲 🎮：
