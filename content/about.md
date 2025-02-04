@@ -1,6 +1,6 @@
 ---
 title: "關於我"
-date: 2024-12-22
+date: 2025-02-04
 draft: false
 ---
 
@@ -11,7 +11,7 @@ draft: false
 ## 技能
 
 - 程式語言： JavaScript, Python
-- 框架：.Vue
+- 框架：React, Django
 - 資料庫：MySQL
 - 其他：Git, Docker
 
