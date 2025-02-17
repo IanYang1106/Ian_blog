@@ -2,8 +2,9 @@
 title: "CH1 React + Vite 啟動方法"
 date: 2025-01-28
 draft: false
-categories: ["React"]
-tags: ["學習筆記"]
+categories: ["React", "教學"]
+tags: ["React教學", "前端開發", "Vite"]
+url: "/Ian_blog/posts/react-tutorials/react-ch1-vite-react-guide"
 ---
 
 # React + Vite 啟動方法

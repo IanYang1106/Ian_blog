@@ -55,12 +55,12 @@ params:
     imageUrl: "/Ian_blog/images/profile.webp" # optional
     imageTitle: "My Profile Image" # optional
     buttons:
-      - name: 文章
-        url: posts
-      - name: 分類
-        url: categories
-      - name: 標籤
-        url: tags
+      - name: React 教學
+        url: /Ian_blog/posts/react-tutorials
+      - name: 技術文件
+        url: /Ian_blog/posts/technical-docs
+      - name: 實作指南
+        url: /Ian_blog/posts/implementation-guides
 
   socialIcons:
     - name: github
@@ -88,24 +88,32 @@ menu:
   main:
     - identifier: search
       name: 搜尋
-      url: /search/
+      url: /Ian_blog/search/
       weight: 10
-    - identifier: posts
-      name: 文章
-      url: /posts/
+    - identifier: react-tutorials
+      name: React 教學
+      url: /Ian_blog/posts/react-tutorials/
       weight: 20
+    - identifier: technical-docs
+      name: 技術文件
+      url: /Ian_blog/posts/technical-docs/
+      weight: 30
+    - identifier: implementation-guides
+      name: 實作指南
+      url: /Ian_blog/posts/implementation-guides/
+      weight: 40
     - identifier: categories
       name: 分類
-      url: /categories/
-      weight: 30
+      url: /Ian_blog/categories/
+      weight: 50
     - identifier: tags
       name: 標籤
-      url: /tags/
-      weight: 40
+      url: /Ian_blog/tags/
+      weight: 60
     - identifier: about
       name: 關於
-      url: /about/
-      weight: 50
+      url: /Ian_blog/about/
+      weight: 70
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
 outputs:
