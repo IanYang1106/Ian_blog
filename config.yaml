@@ -55,12 +55,12 @@ params:
     imageUrl: "/Ian_blog/images/profile.webp" # optional
     imageTitle: "My Profile Image" # optional
     buttons:
-      - name: React 教學
-        url: /posts/react-tutorials
-      - name: 技術文件
-        url: /posts/technical-docs
-      - name: 實作指南
-        url: /posts/implementation-guides
+      - name: 文章
+        url: /posts
+      - name: 分類
+        url: /categories
+      - name: 標籤
+        url: /tags
 
   socialIcons:
     - name: github
