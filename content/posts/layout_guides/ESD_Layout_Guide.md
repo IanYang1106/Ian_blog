@@ -14,7 +14,7 @@ tags: ["學習筆記", "IC Layout"]
 IC 產品在不同使用環境中可能遭遇不同類型的 ESD 事件，因此需要進行多種測試模式的驗證。以下是主要的 ESD 測試模式：
 
 #### 1. Human Body Model (HBM)
-![HBM 測試模式](/posts/layout_guides/ESD_Layout_Guide/G3.1-1.jpe)
+![HBM 測試模式](/Ian_blog/posts/layout_guides/ESD_Layout_Guide/G3.1-1.jpe)
 *圖 1: Human Body Model (HBM) 測試模式*
 
 HBM 模擬人體觸摸 IC 時產生的放電現象：
@@ -24,7 +24,7 @@ HBM 模擬人體觸摸 IC 時產生的放電現象：
 - 等效電路：包含人體電容(100pF)和人體電阻(1500Ω)
 
 #### 2. Machine Model (MM)
-![MM 測試模式](/posts/layout_guides/ESD_Layout_Guide/G3.1-2.jpe)
+![MM 測試模式](/Ian_blog/posts/layout_guides/ESD_Layout_Guide/G3.1-2.jpe)
 *圖 2: Machine Model (MM) 測試模式*
 
 MM 模擬機器設備對 IC 造成的放電：
@@ -34,7 +34,7 @@ MM 模擬機器設備對 IC 造成的放電：
 - 等效電路：包含較大電容(200pF)和較小電阻(0Ω)
 
 #### 3. Charged Device Model (CDM)
-![CDM 測試模式](/posts/layout_guides/ESD_Layout_Guide/G3.1-3.jpe)
+![CDM 測試模式](/Ian_blog/posts/layout_guides/ESD_Layout_Guide/G3.1-3.jpe)
 *圖 3: Charged Device Model (CDM) 測試模式*
 
 CDM 模擬 IC 本身帶電後的快速放電：
@@ -44,7 +44,7 @@ CDM 模擬 IC 本身帶電後的快速放電：
 - 特點：最快速的放電模式，對氧化層破壞風險最高
 
 #### 4. System Level ESD
-![系統層級 ESD 測試](/posts/layout_guides/ESD_Layout_Guide/G3.1-4.jpe)
+![系統層級 ESD 測試](/Ian_blog/posts/layout_guides/ESD_Layout_Guide/G3.1-4.jpe)
 *圖 4: System-Level ESD 測試配置*
 
 系統層級 ESD 測試模擬終端產品使用環境：
@@ -54,7 +54,7 @@ CDM 模擬 IC 本身帶電後的快速放電：
 - 測試點：產品外部可接觸的金屬部分
 
 #### 5. 整合性保護策略
-![完整 ESD 保護策略](/posts/layout_guides/ESD_Layout_Guide/G3.1-5-new.jpe)
+![完整 ESD 保護策略](/Ian_blog/posts/layout_guides/ESD_Layout_Guide/G3.1-5-new.jpe)
 *圖 5: 完整的 ESD 保護策略與測試方法*
 
 完整的 ESD 保護必須考慮：
