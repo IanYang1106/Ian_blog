@@ -1,6 +1,7 @@
 baseURL: "https://IanYang1106.github.io/Ian_blog/"
 title: "Ian's Learning Blog"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
