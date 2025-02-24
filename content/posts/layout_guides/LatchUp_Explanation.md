@@ -38,7 +38,7 @@ Latch-Up（閂鎖效應）是積體電路（IC）中常見的一種問題，會�
 ## 示意圖說明
 
 ### CMOS Latch-Up 結構與電路圖
-![CMOS Latch-up 結構與電路圖](/Ian_blog/posts/layout_guides/latchup_pic1.png)
+![CMOS Latch-up 結構與電路圖](/Ian_blog/posts/layout_guides/LatchUp_Explanation/latchup_pic1.png)
 
 上面這張圖說明了 CMOS 裡的 Latch-Up 現象，左邊是剖面圖，右邊是電路圖：
 
