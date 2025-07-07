@@ -1,3 +1,11 @@
+---
+title: "Synopsys ICC 設定檔教學文件"
+date: 2025-07-07T16:20:00+08:00
+draft: false
+categories: ["ICC"]
+tags: ["學習筆記", "ICC"]
+---
+
 # Synopsys ICC 設定檔教學文件
 
 ## 概述
