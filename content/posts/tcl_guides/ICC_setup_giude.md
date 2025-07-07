@@ -214,5 +214,3 @@ set uniquify_naming_style "%s_UH_%d"
 3. **效能問題**：調整 `max_cores` 參數以利用多核心處理器
 
 ---
-
-**檔案格式**：本文件已為 Markdown 格式，可直接儲存為 `.md` 檔案使用。
