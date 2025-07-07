@@ -1,3 +1,11 @@
+---
+title: "TCL 語言學習指南"
+date: 2025-07-07T15:10:00+08:00
+draft: false
+categories: ["TCL"]
+tags: ["學習筆記", "TCL"]
+---
+
 # TCL 語言學習指南
 
 > 本文件為 TCL (Tool Command Language) 語言的完整學習指南  
