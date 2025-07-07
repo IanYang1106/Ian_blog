@@ -67,9 +67,6 @@ set link_library        {* \
                          tcb016ndhwpwc.db \
                          tpd016nvwc.db \
                          dw_foundation.sldb \
-                         DS2_PAD_L_ss.db \
-                         DS2_PAD_R_ss.db \
-                         AFE_TOP_T528_ss.db \
                          RA1SHD_1Kx8_M16_ss_1.62_125.0.db \
                          RA1SHD_3Kx16_M8_ss_1.62_125.0.db \
                          RF1SH_256x8_M4_ss_1p62v_125c.db \
