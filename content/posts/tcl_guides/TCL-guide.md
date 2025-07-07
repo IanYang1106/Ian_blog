@@ -1,6 +1,6 @@
 ---
 title: "TCL 語言學習指南"
-date: 2025-07-07T15:10:00+08:00
+date: 2025-07-07T15:20:00+08:00
 draft: false
 categories: ["TCL"]
 tags: ["學習筆記", "TCL"]
